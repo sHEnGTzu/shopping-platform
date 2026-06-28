@@ -13,6 +13,7 @@ import com.shop.service.UserService;
 import com.shop.vo.LoginVO;
 import com.shop.vo.UserVO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     private final JwtUtil jwtUtil;
+    private final BCryptPasswordEncoder passwordEncoder;
 
     @Override
     public LoginVO login(LoginDTO dto) {
@@ -28,7 +30,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (user == null) {
             throw BusinessException.badRequest("用户名或密码错误");
         }
-        if (!user.getPassword().equals(dto.getPassword())) {
+        if (!passwordEncoder.matches(dto.getPassword(), user.getPassword())) {
             throw BusinessException.badRequest("用户名或密码错误");
         }
         String token = jwtUtil.generateToken(user.getId(), user.getUsername(), user.getRole());
@@ -44,7 +46,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         User user = new User();
         user.setUsername(dto.getUsername());
-        user.setPassword(dto.getPassword());
+        user.setPassword(passwordEncoder.encode(dto.getPassword()));
         user.setEmail(dto.getEmail());
         user.setPhone(dto.getPhone());
         String role = dto.getRole();

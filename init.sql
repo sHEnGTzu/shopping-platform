@@ -281,15 +281,15 @@ SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES
-(1,'testuser','123456','test@test.com',NULL,NULL,0,'2026-06-28 06:55:36','2026-06-28 07:18:28','admin'),
-(4,'数码陈哥','$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy','chen@shop.com','13800001001',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','merchant'),
-(5,'时尚丽人','$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy','liren@shop.com','13800001002',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','merchant'),
-(6,'书香阁','$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy','shuxiang@shop.com','13800001003',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','merchant'),
-(7,'张三','$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy','zhangsan@mail.com','13900001001',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer'),
-(8,'李四','$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy','lisi@mail.com','13900001002',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer'),
-(9,'王五','$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy','wangwu@mail.com','13900001003',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer'),
-(10,'赵六','$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy','zhaoliu@mail.com','13900001004',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer'),
-(11,'孙七','$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy','sunqi@mail.com','13900001005',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer');
+(1,'testuser','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','test@test.com',NULL,NULL,0,'2026-06-28 06:55:36','2026-06-28 07:18:28','admin'),
+(4,'数码陈哥','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','chen@shop.com','13800001001',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','merchant'),
+(5,'时尚丽人','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','liren@shop.com','13800001002',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','merchant'),
+(6,'书香阁','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','shuxiang@shop.com','13800001003',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','merchant'),
+(7,'张三','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','zhangsan@mail.com','13900001001',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer'),
+(8,'李四','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','lisi@mail.com','13900001002',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer'),
+(9,'王五','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','wangwu@mail.com','13900001003',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer'),
+(10,'赵六','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','zhaoliu@mail.com','13900001004',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer'),
+(11,'孙七','$2b$10$928bZMuHedmdA0yzHsqyV.8sZiTUZc6yTm/.4tcTV/Q3lVbHe0WQO','sunqi@mail.com','13900001005',NULL,0,'2026-06-28 08:22:29','2026-06-28 08:22:29','buyer');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
